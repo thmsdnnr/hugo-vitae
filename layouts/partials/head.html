@@ -34,9 +34,13 @@
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{- end -}}
 	<!-- Add all css files that are necessary -->
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/normalize.css" }}" />
+	<!-- <link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/normalize.css" }}" />
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/all.css" }}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/all.css" }}" /> -->
+
+	<link rel="preload" href="{{ relURL "/css/main.css" }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ relURL "/css/main.css" }}"></noscript>
+
 	<!-- Add math typesetting with KaTeX if math is set -->
 	{{- if or .Params.math .Site.Params.math -}}
 	<link rel="stylesheet" href="{{ relURL "/css/katex.min.css" }}" crossorigin="anonymous">

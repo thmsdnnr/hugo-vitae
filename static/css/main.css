@@ -3,6 +3,7 @@
   font-display: auto;
   font-style:  normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Roboto Regular'), url('../webfonts/Roboto-Regular.woff') format('woff');
 }
 
@@ -11,6 +12,7 @@
   font-display: auto;
   font-style:  normal;
   font-weight: 500;
+  font-display: swap;
   src: local('Roboto Medium'), url('../webfonts/Roboto-Medium.woff') format('woff');
 }
 
@@ -19,6 +21,7 @@
   font-display: auto;
   font-style:  normal;
   font-weight: 600;
+  font-display: swap;
   src: local('Roboto Bold'), url('../webfonts/Roboto-Bold.woff') format('woff');
 }
 
@@ -27,6 +30,7 @@
   font-display: auto;
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Roboto Slab Regular'), url('../webfonts/RobotoSlab-Regular.woff') format('woff');
 }
 
@@ -35,6 +39,7 @@
   font-display: auto;
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Roboto Mono'), url('../webfonts/RobotoMono-Regular.woff') format('woff');
 }
 
@@ -73,7 +78,8 @@ footer {
 }
 
 footer a {
-  color: #555;
+  color: #333;
+  text-decoration: underline;
 }
 
 footer a:hover {
@@ -275,7 +281,7 @@ table th {
 #mainmenu nav li {
   display: inline-block;
   list-style: none;
-  margin: 0 30px 0 0;
+  margin: 0 36px 0 0;
 }
 
 #mainmenu li:last-child {
@@ -460,7 +466,12 @@ code, kbd, pre, samp {
 .highlight {
   background: 0 0;
   background-color: #FAFAFA;
+  box-shadow: 0px 6px 12px 4px rgba(2,2,2,0.22);
+  margin: 32px auto;
+  border: 4px inset rgb(55, 45, 112);
 }
+
+img[src$='#400-high'] { height: 400px; }
 
 pre, textarea {
   overflow: auto;
