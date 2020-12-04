@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!--Showing Thumbnail Title Article / Post-->
 	<meta property="og:title" content="{{ .Title }}">
-	<link rel="preload" href="/webfonts/Roboto-Regular.woff" as="font" type="font/woff2">
+	<link rel="preload" href="/webfonts/Roboto-Regular.woff" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
 	<!--Showing Thumbnail Image Article / Post-->
 	{{ if isset .Params "image" }}
